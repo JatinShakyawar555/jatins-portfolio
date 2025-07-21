@@ -65,9 +65,9 @@ const Navv = () => {
 
 
 			{/* small screen menu */}
-			<div className='flex justify-center relative'>
+			<div className='flex justify-center relative text-white'>
 				{showMenu && (
-					<div className='bg-fuchsia-400  w-[20rem] h-auto mt-9 absolute z-[100] '>
+					<div className='bg-neutral-800  w-[20rem] h-auto mt-9 absolute z-[100] '>
 
 						<div className='flex justify-center items-center  gap-20 px-[1.5rem] py-[1rem] ' >
 							<h1 className='text-xl'>Jatin Shakyawar </h1>
@@ -80,7 +80,7 @@ const Navv = () => {
 
 							{smallNavLinks.map((data, idx) => (
 
-								<div key={idx} className='bg-amber-400 w-[80px] flex justify-center p-1 '>
+								<div key={idx} className='bg-amber-400 w-[80px] flex justify-center p-1 text-black font-semibold'>
 									<Link to={data.path}>
 										{data.name}
 									</Link>
