@@ -9,7 +9,7 @@ import {
   Stars
 } from '@react-three/drei'
 import { Sparkles } from '@react-three/drei'
-import { transmission } from 'three/tsl';
+import { backgroundBlurriness, transmission } from 'three/tsl';
 import Image from './Image';
 import Intro from './Intro';
 
@@ -18,7 +18,7 @@ import { Preload } from '@react-three/drei'
 
 
 const Heading = () => {
- 
+
   return (
     <>
       <div className='relative'>
@@ -47,41 +47,41 @@ function CanvasFunc() {
     transmission: 1,
     thickness: .1,
     chromaticAbberation: 5,
-    ior: 6,// GLOSSY
-    color: 'purple'
-
+    ior: 3,// GLOSSY
+    color: 'gray',
   }
 
   return (
     // IN THIS CANVAS OUR WHOLE SEEN WHILE LIE #0f172a
-    <Canvas camera={{ position: [0, 0, 4] }}  
-     onCreated={({ gl }) => {
-        gl.setClearColor('#000000');  
+    <Canvas camera={{ position: [0, 0, 4] }}
+      onCreated={({ gl }) => {
+        gl.setClearColor('#000000');
       }}
-      >
+    >
       {/* FOR MOVEMENT */}
-      <Float speed={2} rotationIntensity={2}>
-      {/* // -3 */}
-      <Suspense fallback={null}>
-        <Text config={config} position={[-2, -2, 0]}>
+      <Float speed={1} rotationIntensity={1}>
+        {/* // -3 */}
+        <Suspense fallback={null}>
+          <Text config={config} position={[-2, -2, 0]}
+            >
 
-           Hi There, I'm{'\n'}
-           JATIN SHAKYAWAR{'\n'}
-           I Am Into Devlopment!
-        </Text>
+            Hi There, I'm{'\n'}
+            JATIN SHAKYAWAR{'\n'}
+            I Am Into Devlopment!
+          </Text>
 
 
 
-        {/* SPEED OF BLINK */}
-        {/* <Stars count={600} speed={3} saturation={10} /> */}
-        {/* <Sparkles count={600} scale={[20, 20, 20]} size={6} speed={3} /> */}
+          {/* SPEED OF BLINK */}
+          <Stars count={400} speed={2} saturation={0} />
+          {/* <Sparkles count={400} scale={[20, 20, 20]} size={2} speed={1} /> */}
 
-        <Environment preset='studio' blur={1} />
-        {/* <axesHelper args={[50]} /> */}
-        {/* CONRTOL MOVEMENT */}
-        <OrbitControls />
-      </Suspense>
-      <Preload all /> 
+          <Environment preset='warehouse' blur={2} />
+          {/* <axesHelper args={[50]} /> */}
+          {/* CONRTOL MOVEMENT */}
+          <OrbitControls />
+        </Suspense>
+        <Preload all />
       </Float>
 
 

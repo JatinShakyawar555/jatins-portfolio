@@ -13,7 +13,7 @@ const Projects = () => {
 		{
 			img: Streaming,
 			h: "Streaming Platform",
-			p: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut facilis suscipit impeditt"
+			p: "It's a Streaming Platform in which user can see the all movies and web-series trailer and get all information about cast"
 		},
 
 	]
@@ -23,21 +23,11 @@ const Projects = () => {
 			text: "React.js"
 		},
 		{
-			text: "React.js"
+			text: "Tailwind css"
 		},
 		{
-			text: "React.js"
-		},
-		{
-			text: "React.js"
-		},
-
-		{
-			text: "React.js"
-		},
-		{
-			text: "React.js"
-		},
+			text: "Redux"
+		}
 	]
 
 	const links = [

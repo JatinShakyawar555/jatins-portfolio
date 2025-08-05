@@ -53,7 +53,11 @@ const Navv = () => {
 				</div>
 
 				<div className='ff flex items-center '>
-					<Link className='bg-gradient-to-r from-red-600 to-pink-600 w-[100px] mr-4  rounded-xl hover:cursor-pointer text-center' to='/projects' >Connect</Link>
+					<a href="mailto:jatinstech555@gmail.com?subject=Let's " target="_blank" rel="noopener noreferrer">
+						<button className='bg-gradient-to-r from-red-600 to-pink-600 w-[100px] mr-4 rounded-xl hover:cursor-pointer text-white text-center'>
+							Connect
+						</button>
+					</a>
 				</div>
 
 				<div className='ham flex' >
